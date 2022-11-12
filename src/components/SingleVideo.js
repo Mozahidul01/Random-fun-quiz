@@ -1,10 +1,10 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import thumb from "../assets/images/3.jpg";
 import classes from "../styles/SingleVideo.module.css";
 
 export default function singleVideo() {
   return (
-    <a href="quiz.html">
+    <Link to="/quiz">
       <div className={classes.video}>
         <img src={thumb} alt="" />
         <p>Fun with JavaScript</p>
@@ -13,6 +13,6 @@ export default function singleVideo() {
           <p>Score : Not taken yet</p>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import classes from "../../styles/navbar/Account.module.css";
 
 export default function Account() {
@@ -8,9 +8,10 @@ export default function Account() {
         {" "}
         account_circle{" "}
       </span>
-      <a href="signup.html" className={classes.signup}>
+      <Link to="/signup" className={classes.signup}>
         Signup
-      </a>
+      </Link>
+
       {/* <span className="material-icons-outlined" title="Logout">
         {" "}
         logout{" "}

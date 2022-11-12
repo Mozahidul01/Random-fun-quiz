@@ -1,4 +1,3 @@
-import React from "react";
 import successImg from "../assets/images/success.gif";
 import classes from "../styles/Summary.module.css";
 
