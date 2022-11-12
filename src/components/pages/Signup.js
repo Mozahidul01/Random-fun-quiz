@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import signupImg from "../../assets/images/signup.svg";
 import classes from "../../styles/pages/Signup.module.css";
 import Button from "../Button";
@@ -35,7 +35,7 @@ export default function Signup() {
           </Button>
           <div className="info">
             Already have an account?
-            <a href="login.html">Login</a> instead.
+            <Link to="/login">Login</Link> instead.
           </div>
         </Form>
       </div>

@@ -1,4 +1,3 @@
-import React from "react";
 import classes from "../styles/Options.module.css";
 import Checkbox from "./Checkbox";
 

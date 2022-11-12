@@ -1,4 +1,3 @@
-import React from "react";
 import classes from "../styles/Videos.module.css";
 import SingleVideo from "./SingleVideo";
 

@@ -1,4 +1,3 @@
-import React from "react";
 import classes from "../styles/Question.module.css";
 import Options from "./Options";
 

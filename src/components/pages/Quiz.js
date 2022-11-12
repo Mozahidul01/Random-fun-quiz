@@ -1,4 +1,3 @@
-import React from "react";
 import classes from "../../styles/pages/Quiz.module.css";
 import MiniPlayer from "../MiniPlayer";
 import Options from "../Options";

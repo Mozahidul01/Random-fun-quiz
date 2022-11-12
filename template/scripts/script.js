@@ -3,30 +3,30 @@ document.querySelector(".floatingBtn").addEventListener(
   function () {
     this.classList.remove("floatingBtn");
   },
-  true
+  true,
 );
 
 document.querySelector(".miniPlayer .close").addEventListener(
   "click",
-  function () {
+  () => {
     document.querySelector(".miniPlayer").classList.add("floatingBtn");
   },
-  true
+  true,
 );
 
 // tooptip
 document.querySelector(".progress").addEventListener(
   "mouseover",
-  function () {
+  () => {
     document.querySelector(".tooltip").style.display = "block";
   },
-  true
+  true,
 );
 
 document.querySelector(".progress").addEventListener(
   "mouseout",
-  function () {
+  () => {
     document.querySelector(".tooltip").style.display = "none";
   },
-  true
+  true,
 );
