@@ -1,4 +1,3 @@
-import React from "react";
 import classes from "../../styles/pages/Result.module.css";
 import Analysis from "../Analysis";
 import Summary from "../Summary";

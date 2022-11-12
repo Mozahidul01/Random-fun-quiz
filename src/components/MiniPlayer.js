@@ -1,4 +1,3 @@
-import React from "react";
 import thumb from "../assets/images/3.jpg";
 import classes from "../styles/MiniPlayer.module.css";
 
