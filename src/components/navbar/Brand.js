@@ -8,7 +8,7 @@ export default function Brand() {
       <li>
         <Link to="/" className={classes.brand}>
           <img src={logo} alt="Logo" />
-          <h3>Programming Fun Quiz</h3>
+          <h3>Random Fun Quiz</h3>
         </Link>
       </li>
     </ul>

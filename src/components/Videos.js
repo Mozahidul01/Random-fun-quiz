@@ -6,6 +6,9 @@ export default function videos() {
     <div className={classes.videos}>
       <SingleVideo />
       <SingleVideo />
+      <SingleVideo />
+      <SingleVideo />
+      <SingleVideo />
     </div>
   );
 }

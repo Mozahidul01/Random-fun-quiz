@@ -8,7 +8,14 @@
   font-size: 12px;
 }
 
-.account > span:last-child {
+.userName {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: --var(--fontPrimary);
+}
+
+.account>span:last-child {
   cursor: pointer;
 }
 
