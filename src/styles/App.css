@@ -4,6 +4,7 @@
 :root {
   --bodyBackground: #f2f4f8;
   --successGreen: #00bfa6;
+  --warningYellow: #feffc0;
   --dangerRed: #ffc0c7;
   --questionBG: #e4e8ee;
   --fontPrimary: #00131b;
@@ -23,14 +24,13 @@ body {
 }
 
 a {
-  text-decoration: underline solid var(--successGreen) 3px;
-  text-underline-offset: 14%;
+  text-decoration: none;
   color: var(--fontPrimary);
   transition: all 300ms ease-in-out;
 }
 
 a:hover {
-  text-decoration: underline solid var(--fontPrimary) 3px;
+  color: var(--successGreen);
 }
 
 h4 {
@@ -44,6 +44,15 @@ h4 {
 .info {
   margin-top: 1rem;
   text-align: center;
+}
+
+.warning {
+  background-color: var(--warningYellow);
+  padding: 0.6rem 1.2rem;
+  margin-top: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
 }
 
 .error {

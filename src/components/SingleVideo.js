@@ -1,18 +1,17 @@
-import { Link } from "react-router-dom";
-import thumb from "../assets/images/3.jpg";
 import classes from "../styles/SingleVideo.module.css";
 
-export default function singleVideo() {
+export default function singleVideo({ title, id, noq }) {
   return (
-    <Link to="/quiz">
-      <div className={classes.video}>
-        <img src={thumb} alt="" />
-        <p>Fun with JavaScript</p>
-        <div className={classes.qmeta}>
-          <p>10 Questions</p>
-          <p>Score : Not taken yet</p>
-        </div>
+    <div className={classes.video}>
+      <img
+        src={`http://img.youtube.com/vi/${id}/maxresdefault.jpg`}
+        alt={title}
+      />
+      <p>{title}</p>
+      <div className={classes.qmeta}>
+        <p>{noq}</p>
+        <p>Point : {noq * 2}</p>
       </div>
-    </Link>
+    </div>
   );
 }
