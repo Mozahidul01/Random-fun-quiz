@@ -92,7 +92,6 @@
 .tooltip {
   position: absolute;
   top: -70px;
-  left: calc(70% - 65px);
   width: 130px;
   background-color: var(--fontPrimary);
   color: #fff;
@@ -110,7 +109,6 @@
   background-color: var(--fontPrimary);
   border-radius: 4px;
   bottom: 0;
-  left: 50%;
   position: absolute;
   transform: rotate(45deg) translate(-50%, 100%);
 }

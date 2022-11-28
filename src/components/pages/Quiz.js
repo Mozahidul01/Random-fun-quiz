@@ -1,5 +1,4 @@
 /* eslint-disable no-case-declarations */
-/* eslint-disable no-param-reassign */
 import { getDatabase, ref, set } from "firebase/database";
 import _ from "lodash";
 import { useEffect, useReducer, useState } from "react";
@@ -33,8 +32,8 @@ const reducer = (state, action) => {
 };
 
 export default function Quiz() {
-  const locatione = useLocation();
-  const title = locatione.state;
+  const location = useLocation();
+  const title = location.state;
 
   const { id } = useParams();
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -60,14 +59,14 @@ export default function Quiz() {
     });
   };
 
-  // handle when user Click The Next Buttton to get The Next Question
+  // Next Button Function
   const nextQuestion = () => {
     if (currentQuestion + 1 < questions.length) {
       setCurrentQuestion((prevCurrent) => prevCurrent + 1);
     }
   };
 
-  // handle when user Click The Prev Buttton to get The Previous Question
+  // Previous Button Function
   const prevQuestion = () => {
     if (currentQuestion >= 1 && currentQuestion <= questions.length) {
       setCurrentQuestion((prevCurrent) => prevCurrent - 1);

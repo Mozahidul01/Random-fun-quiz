@@ -7,10 +7,10 @@ export default function Options({ options = [], handleChange, input }) {
   return (
     <div className={classes.answers}>
       {options.map((option, index) => (
-        <Fragment key={index.toFixed}>
+        <Fragment key={Math.random() * 1000}>
           {input ? (
             <CheckBox
-              key={index.toFixed}
+              key={Math.random() * 1000}
               className={classes.answer}
               text={option.title}
               value={index}
@@ -19,7 +19,7 @@ export default function Options({ options = [], handleChange, input }) {
             />
           ) : (
             <CheckBox
-              key={index.toFixed}
+              key={Math.random() * 1000}
               className={`${classes.answer} ${
                 option.correct
                   ? classes.correct
