@@ -4,22 +4,30 @@ import classes from "../styles/Videos.module.css";
 import SingleVideo from "./SingleVideo";
 
 export default function videos() {
-  const { loding, error, videos } = useVideoList([]);
-  const videoList = videos[0];
-  // console.log(videos);
+  const { loding, error, videos } = useVideoList();
+
   return (
     <div className={classes.videos}>
       {videos.length > 0 &&
-        videoList.map((video) => (
-          <Link to="/quiz" key={video.youtubeID}>
+        videos[0].map((video) =>
+          video.noq > 0 ? (
+            <Link to={`/quiz/${video.youtubeID}`} key={video.youtubeID}>
+              <SingleVideo
+                title={video.title}
+                id={video.youtubeID}
+                noq={video.noq}
+              />
+            </Link>
+          ) : (
             <SingleVideo
               title={video.title}
               id={video.youtubeID}
               noq={video.noq}
+              key={video.youtubeID}
             />
-          </Link>
-        ))}
-      {!loding && videoList.length === 0 && (
+          )
+        )}
+      {!loding && videos.length === 0 && (
         <div className="warning">No data found!</div>
       )}
       {error && <div className="error">There was an Error</div>}

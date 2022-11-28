@@ -1,8 +1,8 @@
-export default function Checkbox({ className, type, id, text }) {
+/* eslint-disable jsx-a11y/label-has-associated-control */
+export default function Checkbox({ text, className, ...rest }) {
   return (
-    <label className={className} htmlFor={id}>
-      <input type={type} id={id} />
-      <span>{text}</span>
+    <label className={className}>
+      <input type="checkbox" {...rest} /> <span>{text}</span>
     </label>
   );
 }

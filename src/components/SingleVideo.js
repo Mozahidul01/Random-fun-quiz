@@ -9,8 +9,8 @@ export default function singleVideo({ title, id, noq }) {
       />
       <p>{title}</p>
       <div className={classes.qmeta}>
-        <p>{noq}</p>
-        <p>Point : {noq * 2}</p>
+        <p>No. of Quiz: {noq}</p>
+        <p>Point : {noq * 5}</p>
       </div>
     </div>
   );

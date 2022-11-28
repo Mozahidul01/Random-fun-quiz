@@ -1,30 +1,39 @@
+/* eslint-disable no-nested-ternary */
+import { Fragment } from "react";
 import classes from "../styles/Options.module.css";
-import Checkbox from "./Checkbox";
+import CheckBox from "./Checkbox";
 
-export default function Options() {
+export default function Options({ options = [], handleChange, input }) {
   return (
     <div className={classes.answers}>
-      <Checkbox
-        className={classes.answer}
-        htmlFor="option1"
-        type="checkbox"
-        id="option1"
-        text="Using var"
-      />
-      <Checkbox
-        className={classes.answer}
-        htmlFor="option2"
-        type="checkbox"
-        id="option2"
-        text="Using let"
-      />
-      <Checkbox
-        className={classes.answer}
-        htmlFor="option3"
-        type="checkbox"
-        id="option3"
-        text="Using const"
-      />
+      {options.map((option, index) => (
+        <Fragment key={index.toFixed}>
+          {input ? (
+            <CheckBox
+              key={index.toFixed}
+              className={classes.answer}
+              text={option.title}
+              value={index}
+              checked={option.checked}
+              onChange={(e) => handleChange(e, index)}
+            />
+          ) : (
+            <CheckBox
+              key={index.toFixed}
+              className={`${classes.answer} ${
+                option.correct
+                  ? classes.correct
+                  : option.checked
+                  ? classes.wrong
+                  : null
+              }`}
+              text={option.title}
+              defaultChecked={option.checked}
+              disabled
+            />
+          )}
+        </Fragment>
+      ))}
     </div>
   );
 }
